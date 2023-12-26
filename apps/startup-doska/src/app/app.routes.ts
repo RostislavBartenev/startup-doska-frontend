@@ -1,3 +1,10 @@
 import { Route } from '@angular/router';
 
-export const appRoutes: Route[] = [];
+import { LayoutComponent } from './layout/layout.component';
+
+export const appRoutes: Route[] = [
+  {
+    path: '',
+    component: LayoutComponent,
+  },
+];

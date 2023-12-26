@@ -1,0 +1,31 @@
+{
+  "name": "ui",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/startup-doska/core/ui/src",
+  "prefix": "startup-doska",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/startup-doska/core/ui/ng-package.json",
+        "tailwindConfig": "libs/startup-doska/core/ui/tailwind.config.js"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/startup-doska/core/ui/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/startup-doska/core/ui/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  }
+}

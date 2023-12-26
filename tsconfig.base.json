@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@core/auth": ["libs/core/auth/data-access/src/index.ts"],
+      "@core/http-client": ["libs/core/http-client/src/index.ts"],
+      "@core/utils": ["libs/core/utils/src/index.ts"],
+      "@core/models": ["libs/core/models/src/index.ts"],
+
+      "@startup-doska/ui": ["libs/startup-doska/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
